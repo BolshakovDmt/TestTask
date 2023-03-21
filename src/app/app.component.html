@@ -1,0 +1,14 @@
+<div class="padding">
+<p>
+  <button type="button" class="btn btn-outline-primary" (click)="toggleCollapsed()">Месяца</button>
+</p>
+
+<div *ngFor="let slider of sliders">
+  <ngx-slider [(value)]="slider.value" [(highValue)]="slider.highValue" [options]="sliderOptions(slider)"></ngx-slider>
+</div>
+
+<div [ngbCollapse]="isCollapsed">
+  <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" [manualRefresh]="manualRefresh"></ngx-slider>
+</div>
+
+</div>
